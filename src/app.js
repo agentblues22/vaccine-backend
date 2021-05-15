@@ -22,8 +22,10 @@ today = dd + '-' + mm + '-' + yyyy;
         "https://cdn-api.co-vin.in/api/v2/appointment/sessions/calendarByDistrict?district_id=304&date="+today,
         function(error, response, body){
             if(!error &&response.statusCode == 200){
+
                 
                 var parseBody= JSON.parse(body);
+                
                 
                 
                 
