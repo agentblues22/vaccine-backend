@@ -4,7 +4,7 @@ const app= express()
 
 const port =process.env.PORT||5000;
 
-
+app.get("/",(req,res)=>(res.send("test")))
 
 app.get('/vaccine', (req,res )=> {
     var today = new Date();
