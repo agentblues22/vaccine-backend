@@ -4,7 +4,51 @@ const app= express()
 
 const port =process.env.PORT||5000;
 
-app.get("/",(req,res)=>(res.send("test")))
+app.get("/",(req,res)=>{
+    request(
+        "https://cdn-api.co-vin.in/api/v2/appointment/sessions/calendarByDistrict?district_id=304&date=15-05-2021",
+        function(error, response, body){
+            if(!error &&response.statusCode == 200){
+                
+                var parseBody= JSON.parse(body);
+                
+                
+                
+                
+                if (parseBody.centers==""){
+
+                   var availability= null;
+                }
+                else{
+                    
+                    var availability = parseBody.centers;
+                    
+                    
+                    
+                    
+                }
+                res.send({availability});
+                
+                
+               
+
+                
+                    
+                
+                
+
+                
+                
+
+               
+                   
+                    
+                
+                
+            };
+        }
+    );
+})
 
 app.get('/vaccine', (req,res )=> {
     var today = new Date();
