@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "build": "cd vaccine-frontend && npm run build",
-    "install-client":"cd vaccine-frontend && npm install",
-    "heroku-postbuild":"npm run install-client && npm run build"
+    "start": "node app.js"
+    
   },
   "author": "",
   "license": "ISC",
