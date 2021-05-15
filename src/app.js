@@ -7,8 +7,11 @@ const router= express.Router();
 
 
 router.get("/",(req,res)=>{
-    res.send("test end")
-})
+    res.json({
+
+        "hello":"helo"
+    });
+});
 
 router.get('/vaccine', (req,res )=> {
     var today = new Date();
