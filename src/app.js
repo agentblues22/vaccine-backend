@@ -36,13 +36,13 @@ today = dd + '-' + mm + '-' + yyyy;
                 }
                 else{
                     
-                    var availability = parseBody.centers;
+                    var availability =Array.from( parseBody.centers);
                     
                     
                     
                     
                 }
-                res.send({availability});
+                res.json(availability);
                 
                 
                
