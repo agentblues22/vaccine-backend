@@ -19,7 +19,7 @@ var yyyy = today.getFullYear();
 today = dd + '-' + mm + '-' + yyyy;
     var dist = req.query.distr;
     request(
-        "https://cdn-api.co-vin.in/api/v2/appointment/sessions/calendarByDistrict?district_id="+dist+"&date="+today,
+        "https://cdn-api.co-vin.in/api/v2/appointment/sessions/calendarByDistrict?district_id=304&date="+today,
         function(error, response, body){
             if(!error &&response.statusCode == 200){
                 
@@ -59,6 +59,7 @@ today = dd + '-' + mm + '-' + yyyy;
                 
                 
             };
+           
         }
     );
 
