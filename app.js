@@ -63,8 +63,6 @@ today = dd + '-' + mm + '-' + yyyy;
 
 }) ;
 
-if(process.env.NODE_ENV==="production"){
-    app.use(express.static("vaccine-frontend/build"));
-}
+
 
 app.listen(port, ()=> console.log(`connected to port ${port}`));
